@@ -1,6 +1,6 @@
 import { useState, useCallback } from 'react'
 import { useDropzone } from 'react-dropzone'
-import { Loader } from './components/loader'
+import { Loader } from './components/Loader'
 import { CopyToClipboardButton } from './components/CopyToClipboardButton'
 
 function App () {
