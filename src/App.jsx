@@ -49,7 +49,7 @@ function App () {
   const timeError = () => {
     setTimeout(() => {
       setErrorMessage('')
-    }, 3000)
+    }, 5000)
   }
 
   // resset del estado
@@ -59,7 +59,10 @@ function App () {
     setShowImg(false)
   }
 
-  const { getRootProps, getInputProps, isDragActive, acceptedFiles } = useDropzone({ onDrop })
+  const { getRootProps, getInputProps, isDragActive, acceptedFiles } = useDropzone({
+    onDrop,
+    multiple: false
+  })
 
   return (
     <main className='card'>
@@ -87,7 +90,7 @@ function App () {
                 </div>
                 <p>Or</p>
                 <div className='center'>
-                  <label htmlFor='file-input'>Choose a file</label>
+                  <label htmlFor='file-input'>Choose a image</label>
                 </div>
               </form>
             </>
